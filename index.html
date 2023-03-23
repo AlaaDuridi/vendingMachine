@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+
+        <script src="../javascript files/home.js"></script>
+</head>
+<body>
+
+   
+    
+        <form id="entryForm"autocomplete="off" action="#" method="get" > 
+                <div id="divone">
+                        <center >
+                                <h3 class="header">Vending Machine</h3>
+                                <label id="item-nu" >enter two digits item number  </label>
+                                <input type="text" id="item-number"  
+                                placeholder="item number ..."
+                                maxlength="2" 
+                                pattern="[0-9]{2}"
+                                onkeypress="return /[0-9]/i.test(event.key)" required
+                                onkeydown="no_backspaces(event);">
+                                <span id="current-quantity" style="display:none;" ></span>
+                                <span id ="price-desc" style="display: none;"> the price of this item is: </span>
+                                <span id="price-item"  style="display:none;"></span>
+                                
+                                <button id ="clearButton" type ="button" onclick="clearall()" style="display: none;"> clear </button>  
+                                <div id ="btndiv" style="display: none;"> 
+                                        <center>
+                                        <button id="showBtn"  onclick="showPopUpBox()">Click to enter the money</button>
+                                </center>
+                                </div>
+                
+                                <p id="demo"></p>                              
+                        </center>
+                </div>
+
+
+                
+
+        </form>
+
+        
+
+        <script>
+                document.getElementById("item-number").addEventListener("input", myfunction) ; 
+        </script>
+       
+
+  
+</body>
+</html>
