@@ -55,7 +55,8 @@ function myfunction() {
       }
     }
     /*will show the button if not clear */ 
-    setTimeout(function(){ $("#btndiv").show() ;}, 2000);
+//     setTimeout(function(){ $("#btndiv").show() ;}, 2000);
+    setTimeout(function(){ document.getElementById('btndiv').style.display="block" ;}, 2000);
   }
 }
 
